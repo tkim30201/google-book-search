@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchArea from './SearchArea'
-import request, { get } from 'superagent';
+import request from 'superagent';
 
 
 class Books extends Component {
