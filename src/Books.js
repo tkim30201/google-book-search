@@ -12,10 +12,11 @@ class Books extends Component {
         }
     }
 
-    searchBook = () => {
+    searchBook = (e) => {
+        e.preventDefault();
         request
             .get("https://www.googleapis.com/books/v1/volumes")
-            .query({ q: this.searchField })
+            .query({ q: this.state.searchField })
             .then((data) => {
                 console.log(data);
             })
